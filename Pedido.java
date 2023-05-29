@@ -1,8 +1,21 @@
-public class Pedido extends Cliente {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Pedido {
     private int id;
     private Cliente cliente;
     private Double valorTotal;
     private int tipoPagamento;
+    private List<Item> itens;
+
+    public Pedido(int id, Cliente cliente, double valorTotal, int tipoPagamento){
+        this.cliente = cliente;
+        this.id = id;
+        this.valorTotal = valorTotal;
+        this.tipoPagamento = tipoPagamento;
+        this.itens = new ArrayList<>();
+    }
+
     public int getId() {
         return id;
     }
